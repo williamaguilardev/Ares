@@ -367,8 +367,8 @@ input, select {
 
 .capsule-render {
     width: 100%;
-    max-width: 500px;
-    aspect-ratio: 4/3;
+    max-width: 800px;
+    aspect-ratio: 16/9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -422,7 +422,6 @@ input, select {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 12px;
 }
 
 .render-label {

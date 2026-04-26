@@ -374,6 +374,7 @@ input, select {
     justify-content: center;
     position: relative;
     overflow: hidden;
+    background: url('assets/img/Home.png') center/cover no-repeat;
 }
 
 .render-container {
@@ -416,12 +417,6 @@ input, select {
     height: 30%;
     background: linear-gradient(to top, rgba(255, 255, 255, 0.05), transparent);
     border-radius: 0 0 20px 20px;
-}
-
-.capsule-render-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .render-label {

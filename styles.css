@@ -735,6 +735,13 @@ input, select {
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, var(--gray-700), var(--gray-500));
+    overflow: hidden;
+}
+
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .image-label {

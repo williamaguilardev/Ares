@@ -380,8 +380,6 @@ input, select {
 .render-container {
     display: none;
 }
-    justify-content: center;
-}
 
 .capsule-silhouette {
     position: relative;

@@ -559,8 +559,12 @@ input, select {
 }
 
 @media (max-width: 900px) {
-    .specs-premium-grid {
+    .specs-premium-grid, .specs-grid {
         grid-template-columns: 1fr;
+    }
+    
+    [style*="grid-template-columns: 1fr 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
     }
 }
 

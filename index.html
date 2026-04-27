@@ -378,70 +378,80 @@
         </div>
     </footer>
 
-    <div class="modal" id="modal" style="position: fixed; inset: 0; z-index: 9999; display: none; background: rgba(0,0,0,0.9);">
-        <div style="position: absolute; inset: 0; backdrop-filter: blur(20px);"></div>
-        <div class="modal-content" style="position: relative; background: #0a0a0a; border: 1px solid #222; border-radius: 24px; padding: 48px; max-width: 480px; width: 90%; max-height: 90vh; overflow-y: auto; animation: modalSlideIn 0.4s ease;">
-            <button class="modal-close" style="position: absolute; top: 20px; right: 20px; background: transparent; border: none; color: #666; cursor: pointer; padding: 8px; transition: color 0.2s;">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M18 6L6 18M6 6l12 12"/>
-                </svg>
-            </button>
-            
-            <div style="text-align: center; margin-bottom: 32px;">
-                <span style="font-size: 12px; font-weight: 600; color: #2563eb; letter-spacing: 2px; text-transform: uppercase;">Reservación</span>
-                <h3 style="font-size: 28px; font-weight: 700; color: #fff; margin-top: 12px;">Aparta tu cápsula</h3>
-                <p style="font-size: 14px; color: #666; margin-top: 8px;">Completa tus datos para iniciar el proceso.</p>
-            </div>
-            
-            <form class="modal-form" id="reserveForm" style="display: flex; flex-direction: column; gap: 20px;">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-                    <div style="position: relative;">
-                        <label style="font-size: 12px; font-weight: 600; color: #888; display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Nombre</label>
-                        <input type="text" placeholder="Juan" required style="width: 100%; padding: 16px; background: #111; border: 1px solid #222; border-radius: 12px; color: #fff; font-size: 16px; transition: border-color 0.2s;">
+<div class="modal" id="modal" style="position: fixed; inset: 0; z-index: 9999; display: none; background: rgba(0,0,0,0.7); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);">
+        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(37,99,235,0.1) 0%, transparent 50%);"></div>
+        
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; max-width: 420px; padding: 20px;">
+            <div style="background: #0a0a0a; border: 1px solid rgba(255,255,255,0.08); border-radius: 28px; padding: 40px; box-shadow: 0 25px 80px rgba(0,0,0,0.6), 0 0 1px rgba(255,255,255,0.1) inset; animation: luxuryModalIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);">
+                <button class="modal-close" style="position: absolute; top: 16px; right: 16px; background: rgba(255,255,255,0.05); border: none; color: #666; cursor: pointer; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+                
+                <div style="text-align: center; margin-bottom: 36px;">
+                    <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #2563eb, #1d4ed8); border-radius: 14px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
                     </div>
-                    <div style="position: relative;">
-                        <label style="font-size: 12px; font-weight: 600; color: #888; display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Apellido</label>
-                        <input type="text" placeholder="Pérez" required style="width: 100%; padding: 16px; background: #111; border: 1px solid #222; border-radius: 12px; color: #fff; font-size: 16px; transition: border-color 0.2s;">
-                    </div>
-                </div>
-                <div style="position: relative;">
-                    <label style="font-size: 12px; font-weight: 600; color: #888; display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Email</label>
-                    <input type="email" placeholder="juan@email.com" required style="width: 100%; padding: 16px; background: #111; border: 1px solid #222; border-radius: 12px; color: #fff; font-size: 16px; transition: border-color 0.2s;">
-                </div>
-                <div style="position: relative;">
-                    <label style="font-size: 12px; font-weight: 600; color: #888; display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Teléfono</label>
-                    <input type="tel" placeholder="+52 999 000 0000" required style="width: 100%; padding: 16px; background: #111; border: 1px solid #222; border-radius: 12px; color: #fff; font-size: 16px; transition: border-color 0.2s;">
-                </div>
-                <div style="position: relative;">
-                    <label style="font-size: 12px; font-weight: 600; color: #888; display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Monto a apartar</label>
-                    <select required style="width: 100%; padding: 16px; background: #111; border: 1px solid #222; border-radius: 12px; color: #fff; font-size: 16px; appearance: none; cursor: pointer;">
-                        <option value="" style="color: #666;">Seleccionar monto...</option>
-                        <option value="5000" style="background: #111;">$5,000 MXN</option>
-                        <option value="10000" style="background: #111;">$10,000 MXN</option>
-                        <option value="25000" style="background: #111;">$25,000 MXN</option>
-                    </select>
+                    <h3 style="font-size: 26px; font-weight: 600; color: #fff; letter-spacing: -0.5px;">Aparta tuCapsula</h3>
+                    <p style="font-size: 14px; color: #666; margin-top: 8px; line-height: 1.5;">Reserva ahora y asegura tu unidad.\nTe contactaremos en menos de 24 horas.</p>
                 </div>
                 
-                <button type="submit" style="width: 100%; padding: 18px; background: #2563eb; border: none; border-radius: 12px; color: #fff; font-size: 16px; font-weight: 600; cursor: pointer; margin-top: 16px; transition: background 0.2s, transform 0.2s;">
-                    <span>Continuar al pago</span>
-                </button>
-            </form>
+                <form class="modal-form" id="reserveForm" style="display: flex; flex-direction: column; gap: 16px;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <div>
+                            <label style="font-size: 11px; font-weight: 600; color: #555; display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Nombre</label>
+                            <input type="text" placeholder="Juan" required style="width: 100%; padding: 14px 16px; background: #111; border: 1px solid #1f1f1f; border-radius: 12px; color: #fff; font-size: 15px; transition: all 0.2s;">
+                        </div>
+                        <div>
+                            <label style="font-size: 11px; font-weight: 600; color: #555; display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Apellido</label>
+                            <input type="text" placeholder="Pérez" required style="width: 100%; padding: 14px 16px; background: #111; border: 1px solid #1f1f1f; border-radius: 12px; color: #fff; font-size: 15px; transition: all 0.2s;">
+                        </div>
+                    </div>
+                    <div>
+                        <label style="font-size: 11px; font-weight: 600; color: #555; display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Email</label>
+                        <input type="email" placeholder="juan@email.com" required style="width: 100%; padding: 14px 16px; background: #111; border: 1px solid #1f1f1f; border-radius: 12px; color: #fff; font-size: 15px; transition: all 0.2s;">
+                    </div>
+                    <div>
+                        <label style="font-size: 11px; font-weight: 600; color: #555; display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Teléfono</label>
+                        <input type="tel" placeholder="+52 999 000 0000" required style="width: 100%; padding: 14px 16px; background: #111; border: 1px solid #1f1f1f; border-radius: 12px; color: #fff; font-size: 15px; transition: all 0.2s;">
+                    </div>
+                    <div>
+                        <label style="font-size: 11px; font-weight: 600; color: #555; display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Monto a apartar</label>
+                        <div style="position: relative;">
+                            <select required style="width: 100%; padding: 14px 16px; background: #111; border: 1px solid #1f1f1f; border-radius: 12px; color: #888; font-size: 15px; appearance: none; cursor: pointer;">
+                                <option value="" style="color: #555;">Seleccionar monto...</option>
+                                <option value="5000" style="background: #111; color: #fff;">$5,000 MXN</option>
+                                <option value="10000" style="background: #111; color: #fff;">$10,000 MXN</option>
+                                <option value="25000" style="background: #111; color: #fff;">$25,000 MXN</option>
+                            </select>
+                            <svg style="position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; color: #555; pointer-events: none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" style="width: 100%; padding: 16px; background: linear-gradient(135deg, #2563eb, #1d4ed8); border: none; border-radius: 14px; color: #fff; font-size: 15px; font-weight: 600; cursor: pointer; margin-top: 8px; transition: all 0.3s; box-shadow: 0 4px 20px rgba(37,99,235,0.3);">
+                        <span>Continuar al pago</span>
+                    </button>
+                </form>
 
-            <p style="font-size: 11px; color: #444; text-align: center; margin-top: 24px; line-height: 1.5;">Al continuar, aceptas nuestros Términos y Privacidad. Tecontactaremos en 24 horas.</p>
+                <p style="font-size: 10px; color: #333; text-align: center; margin-top: 20px; line-height: 1.5;">Al continuar aceptas nuestros Términos. Te contactaremosen 24 horas.</p>
+            </div>
         </div>
     </div>
 
     <style>
-    @keyframes modalSlideIn {
-        from { opacity: 0; transform: translateY(20px) scale(0.95); }
-        to { opacity: 1; transform: translateY(0) scale(1); }
+    @keyframes luxuryModalIn {
+        from { opacity: 0; transform: translate(-50%, -45%) scale(0.94); }
+        to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
     }
-    .modal-content input:focus, .modal-content select:focus {
-        outline: none; border-color: #2563eb !important;
-    }
-    .modal-content button:hover {
-        background: #3b82f6 !important; transform: translateY(-1px);
-    }
+    .modal-close:hover { background: rgba(255,255,255,0.1) !important; color: #fff !important; }
+    input:focus, select:focus { outline: none; border-color: #2563eb !important; background: #151515 !important; }
+    button[type="submit"]:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(37,99,235,0.4) !important; }
     </style>
 
     <div class="scroll-progress">

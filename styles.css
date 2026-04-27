@@ -1264,6 +1264,17 @@ input, select {
         line-height: 1.2 !important;
     }
     
+    .specs-metrics {
+        flex-direction: column !important;
+        gap: 24px !important;
+        align-items: center !important;
+    }
+    
+    .metric-item {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
     h3[style*="font-size: 32px"] {
         font-size: 1.5rem !important;
     }

@@ -39,11 +39,17 @@ function initModal() {
 
     const openModal = () => {
         modal.style.display = 'flex';
+        setTimeout(() => {
+            modal.style.opacity = '1';
+        }, 10);
         document.body.style.overflow = 'hidden';
     };
 
     const closeModal = () => {
-        modal.style.display = 'none';
+        modal.style.opacity = '0';
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 300);
         document.body.style.overflow = '';
     };
 

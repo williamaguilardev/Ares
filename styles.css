@@ -546,9 +546,6 @@ input, select {
 .especificaciones {
     background: var(--black);
     overflow: hidden;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
     padding: 80px 0;
 }
 
@@ -617,30 +614,37 @@ input, select {
 }
 
 .spec-card-number {
-    display: inline-block;
+    display: block;
     font-size: 0.7rem;
     font-weight: 700;
     color: var(--accent);
-    letter-spacing: 0.2em;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .spec-card-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--white);
     margin-bottom: 8px;
 }
 
 .spec-card-desc {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--gray-400);
-    line-height: 1.5;
-    margin-bottom: 16px;
+    line-height: 1.4;
+    margin-bottom: 12px;
 }
 
 .spec-card-features {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.spec-card-features li {
     padding: 0;
     margin: 0;
     display: flex;

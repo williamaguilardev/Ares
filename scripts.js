@@ -165,4 +165,16 @@ function initAnimations() {
         duration: 0.8,
         ease: 'power3.out'
     });
+
+    gsap.from('.spec-card-premium', {
+        scrollTrigger: {
+            trigger: '.specs-premium-grid',
+            start: 'top 80%'
+        },
+        y: 60,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.15,
+        ease: 'power3.out'
+    });
 }

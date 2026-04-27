@@ -545,6 +545,133 @@ input, select {
 /* ===== ESPECIFICACIONES ===== */
 .especificaciones {
     background: var(--black-soft);
+    overflow: hidden;
+}
+
+.specs-premium-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--gray-800);
+    border-radius: 24px;
+    padding: 2px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .specs-premium-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.spec-card-premium {
+    background: var(--black);
+    border-radius: 22px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.spec-card-premium:hover {
+    transform: translateY(-8px);
+}
+
+.spec-card-image {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+
+.spec-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.spec-card-premium:hover .spec-card-image img {
+    transform: scale(1.1);
+}
+
+.spec-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--black) 0%, transparent 60%);
+    opacity: 0.8;
+    transition: opacity 0.4s ease;
+}
+
+.spec-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    transform: translateY(60px);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.spec-card-premium:hover .spec-card-content {
+    transform: translateY(0);
+}
+
+.spec-card-number {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    margin-bottom: 8px;
+}
+
+.spec-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+}
+
+.spec-card-desc {
+    font-size: 0.85rem;
+    color: var(--gray-400);
+    line-height: 1.5;
+    margin-bottom: 16px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease 0.1s;
+}
+
+.spec-card-premium:hover .spec-card-desc {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.spec-card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease 0.2s;
+}
+
+.spec-card-premium:hover .spec-card-features {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.spec-card-features li {
+    font-size: 0.75rem;
+    color: var(--gray-300);
+    background: var(--gray-800);
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--gray-700);
 }
 
 .specs-layout {

@@ -379,54 +379,54 @@
     </footer>
 
 <div class="modal" id="modal" style="position: fixed; inset: 0; z-index: 9999; display: none; background: rgba(0,0,0,0.7); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); transition: opacity 0.3s ease;">
-        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(37,99,235,0.08) 0%, transparent 60%);"></div>
+        <div class="modal-overlay-gradient" style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(37,99,235,0.08) 0%, transparent 60%);"></div>
         
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; max-width: 650px; padding: 20px;">
-            <div style="background: #0a0a0a; border: 1px solid rgba(255,255,255,0.08); border-radius: 28px; padding: 48px; box-shadow: 0 25px 80px rgba(0,0,0,0.6); animation: luxuryModalIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;">
-                <button class="modal-close" style="position: absolute; top: 16px; right: 16px; background: rgba(255,255,255,0.05); border: none; color: #666; cursor: pointer; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">
+        <div class="modal-wrapper" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; max-width: 650px; padding: 20px;">
+            <div class="modal-card" style="background: #0a0a0a; border: 1px solid rgba(255,255,255,0.08); border-radius: 28px; padding: 48px; box-shadow: 0 25px 80px rgba(0,0,0,0.6);">
+                <button class="modal-close-btn" style="position: absolute; top: 16px; right: 16px; background: rgba(255,255,255,0.05); border: none; color: #666; cursor: pointer; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M18 6L6 18M6 6l12 12"/>
                     </svg>
                 </button>
                 
-                <div style="text-align: center; margin-bottom: 36px;">
-                    <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #2563eb, #1d4ed8); border-radius: 14px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                <div class="modal-header" style="text-align: center; margin-bottom: 36px;">
+                    <div class="modal-icon" style="width: 48px; height: 48px; background: linear-gradient(135deg, #2563eb, #1d4ed8); border-radius: 14px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
                             <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
                             <polyline points="9 22 9 12 15 12 15 22"/>
                         </svg>
                     </div>
-                    <h3 style="font-size: 28px; font-weight: 600; color: #fff; letter-spacing: -0.5px;">Aparta tu Cápsula</h3>
-                    <p style="font-size: 14px; color: #666; margin-top: 8px; line-height: 1.5;">Reserva ahora y asegura tu unidad.<br/>Te contactaremos en menos de 24 horas.</p>
+                    <h3 class="modal-title" style="font-size: 28px; font-weight: 600; color: #fff; letter-spacing: -0.5px;">Aparta tu Cápsula</h3>
+                    <p class="modal-desc" style="font-size: 14px; color: #666; margin-top: 8px; line-height: 1.5;">Reserva ahora y asegura tu unidad.<br/>Te contactaremos en menos de 24 horas.</p>
                 </div>
                 
                 <form class="modal-form" id="reserveForm" style="display: flex; flex-direction: column; gap: 16px;">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div class="modal-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
                         <div>
-                            <label style="font-size: 11px; font-weight: 600; color: #555; display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Nombre</label>
-                            <input type="text" placeholder="Juan" required style="width: 100%; padding: 14px 16px; background: #111; border: 1px solid #1f1f1f; border-radius: 12px; color: #fff; font-size: 15px; transition: all 0.2s;">
+                            <label class="modal-label" style="font-size: 11px; font-weight: 600; color: #555; display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Nombre</label>
+                            <input class="modal-input" type="text" placeholder="Juan" required style="width: 100%; padding: 14px 16px; background: #111; border: 1px solid #1f1f1f; border-radius: 12px; color: #fff; font-size: 15px; transition: all 0.2s;">
                         </div>
                         <div>
-                            <label style="font-size: 11px; font-weight: 600; color: #555; display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Apellido</label>
-                            <input type="text" placeholder="Pérez" required style="width: 100%; padding: 14px 16px; background: #111; border: 1px solid #1f1f1f; border-radius: 12px; color: #fff; font-size: 15px; transition: all 0.2s;">
+                            <label class="modal-label" style="font-size: 11px; font-weight: 600; color: #555; display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Apellido</label>
+                            <input class="modal-input" type="text" placeholder="Pérez" required style="width: 100%; padding: 14px 16px; background: #111; border: 1px solid #1f1f1f; border-radius: 12px; color: #fff; font-size: 15px; transition: all 0.2s;">
                         </div>
                     </div>
                     <div>
-                        <label style="font-size: 11px; font-weight: 600; color: #555; display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Email</label>
-                        <input type="email" placeholder="juan@email.com" required style="width: 100%; padding: 14px 16px; background: #111; border: 1px solid #1f1f1f; border-radius: 12px; color: #fff; font-size: 15px; transition: all 0.2s;">
+                        <label class="modal-label" style="font-size: 11px; font-weight: 600; color: #555; display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Email</label>
+                        <input class="modal-input" type="email" placeholder="juan@email.com" required style="width: 100%; padding: 14px 16px; background: #111; border: 1px solid #1f1f1f; border-radius: 12px; color: #fff; font-size: 15px; transition: all 0.2s;">
                     </div>
                     <div>
-                        <label style="font-size: 11px; font-weight: 600; color: #555; display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Teléfono</label>
-                        <input type="tel" placeholder="+52 999 000 0000" required style="width: 100%; padding: 14px 16px; background: #111; border: 1px solid #1f1f1f; border-radius: 12px; color: #fff; font-size: 15px; transition: all 0.2s;">
+                        <label class="modal-label" style="font-size: 11px; font-weight: 600; color: #555; display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Teléfono</label>
+                        <input class="modal-input" type="tel" placeholder="+52 999 000 0000" required style="width: 100%; padding: 14px 16px; background: #111; border: 1px solid #1f1f1f; border-radius: 12px; color: #fff; font-size: 15px; transition: all 0.2s;">
                     </div>
                     
-                    <div style="padding: 20px; background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(37,99,235,0.05)); border: 1px solid rgba(37,99,235,0.2); border-radius: 14px;">
+                    <div class="modal-monto" style="padding: 20px; background: linear-gradient(135deg, rgba(37,99,235,0.1), rgba(37,99,235,0.05)); border: 1px solid rgba(37,99,235,0.2); border-radius: 14px;">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
                             <div>
-                                <p style="color: #888; font-size: 13px;">Monto a apartar</p>
-                                <p style="color: #fff; font-size: 24px; font-weight: 700;">$5,000<span style="font-size: 14px; font-weight: 400; color: #666;"> MXN</span></p>
+                                <p class="modal-monto-label" style="color: #888; font-size: 13px;">Monto a apartar</p>
+                                <p class="modal-monto-amount" style="color: #fff; font-size: 24px; font-weight: 700;">$5,000<span style="font-size: 14px; font-weight: 400; color: #666;"> MXN</span></p>
                             </div>
-                            <div style="width: 40px; height: 40px; background: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <div class="modal-monto-check" style="width: 40px; height: 40px; background: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
                                     <polyline points="20 6 9 17 4 12"/>
                                 </svg>
@@ -434,12 +434,12 @@
                         </div>
                     </div>
                     
-                    <button type="submit" style="width: 100%; padding: 16px; background: linear-gradient(135deg, #2563eb, #1d4ed8); border: none; border-radius: 14px; color: #fff; font-size: 15px; font-weight: 600; cursor: pointer; margin-top: 8px; transition: all 0.3s; box-shadow: 0 4px 20px rgba(37,99,235,0.3);">
+                    <button type="submit" class="modal-submit" style="width: 100%; padding: 16px; background: linear-gradient(135deg, #2563eb, #1d4ed8); border: none; border-radius: 14px; color: #fff; font-size: 15px; font-weight: 600; cursor: pointer; margin-top: 8px; transition: all 0.3s; box-shadow: 0 4px 20px rgba(37,99,235,0.3);">
                         <span>Continuar al pago</span>
                     </button>
                 </form>
 
-                <p style="font-size: 10px; color: #333; text-align: center; margin-top: 20px; line-height: 1.5;">Al continuar aceptas nuestros Términos. Te contactaremos en 24 horas.</p>
+                <p class="modal-footer" style="font-size: 10px; color: #333; text-align: center; margin-top: 20px; line-height: 1.5;">Al continuar aceptas nuestros Términos. Te contactaremos en 24 horas.</p>
             </div>
         </div>
     </div>
@@ -449,246 +449,100 @@
         from { opacity: 0; }
         to { opacity: 1; }
     }
-    .modal > div:first-child { animation: luxuryModalIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-    .modal > div:last-child > div { animation: luxuryModalIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-    .modal-close:hover { background: rgba(255,255,255,0.1) !important; color: #fff !important; }
-    input:focus, select:focus { outline: none; border-color: #2563eb !important; background: #151515 !important; }
-    button[type="submit"]:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(37,99,235,0.4) !important; }
+    .modal-overlay-gradient { animation: luxuryModalIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    .modal-card { animation: luxuryModalIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    .modal-close-btn:hover { background: rgba(255,255,255,0.1) !important; color: #fff !important; }
+    .modal-input:focus { outline: none; border-color: #2563eb !important; background: #151515 !important; }
+    .modal-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(37,99,235,0.4) !important; }
     
-    /* ===== RESPONSIVE MODAL ===== */
-    @media (max-width: 768px) {
-        .modal > div:last-child {
-            max-width: 90% !important;
-            padding: 32px 28px !important;
-        }
-        .modal > div:last-child > div {
-            padding: 32px 28px !important;
-        }
-        .modal h3 {
-            font-size: 24px !important;
-        }
-        .modal p {
-            font-size: 13px !important;
-        }
-        .modal form {
-            gap: 14px !important;
-        }
-        .modal input, .modal select {
-            padding: 12px 14px !important;
-            font-size: 14px !important;
-        }
+    /* ===== RESPONSIVE MODAL - TABLET ===== */
+    @media screen and (max-width: 768px) {
+        .modal-wrapper { max-width: 85% !important; padding: 28px !important; }
+        .modal-card { padding: 36px 32px !important; border-radius: 24px !important; }
+        .modal-title { font-size: 26px !important; line-height: 1.2 !important; }
+        .modal-desc { font-size: 13px !important; }
+        .modal-icon { width: 44px !important; height: 44px !important; border-radius: 12px !important; margin-bottom: 18px !important; }
+        .modal-icon svg { width: 22px !important; height: 22px !important; }
+        .modal-form { gap: 14px !important; }
+        .modal-label { font-size: 10px !important; margin-bottom: 6px !important; }
+        .modal-input { padding: 12px 14px !important; font-size: 14px !important; border-radius: 10px !important; height: 44px; }
+        .modal-row { grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
+        .modal-monto { padding: 16px !important; border-radius: 12px !important; }
+        .modal-monto-amount { font-size: 22px !important; }
+        .modal-monto-check { width: 36px !important; height: 36px !important; }
+        .modal-monto-check svg { width: 18px !important; height: 18px !important; }
+        .modal-submit { padding: 14px !important; font-size: 14px !important; border-radius: 12px !important; height: 48px; }
+        .modal-footer { font-size: 9px !important; margin-top: 18px !important; }
+        .modal-close-btn { top: 14px !important; right: 14px !important; width: 30px !important; height: 30px !important; }
     }
     
-    @media (max-width: 480px) {
-        .modal {
-            padding: 16px !important;
-        }
-        .modal > div:first-child {
-            display: none !important;
-        }
-        .modal > div:last-child {
-            max-width: 100% !important;
-            width: 100% !important;
-            padding: 0 !important;
-            border-radius: 24px !important;
-        }
-        .modal > div:last-child > div {
-            padding: 28px 20px 24px !important;
-            border-radius: 24px !important;
-        }
-        .modal h3 {
-            font-size: 22px !important;
-            letter-spacing: -0.3px !important;
-        }
-        .modal > div:last-child > div > div:first-child {
-            width: 40px !important;
-            height: 40px !important;
-            border-radius: 12px !important;
-            margin-bottom: 16px !important;
-        }
-        .modal > div:last-child > div > div:first-child svg {
-            width: 20px !important;
-            height: 20px !important;
-        }
-        .modal p {
-            font-size: 12px !important;
-            line-height: 1.4 !important;
-        }
-        .modal form {
-            gap: 12px !important;
-        }
-        .modal-label {
-            font-size: 10px !important;
-        }
-        .modal input, .modal select {
-            padding: 12px 14px !important;
-            font-size: 14px !important;
-            border-radius: 10px !important;
-            height: 44px;
-        }
-        .modal form > div:first-child {
-            grid-template-columns: 1fr !important;
-            gap: 12px !important;
-        }
-        .modal form > div:first-child > div {
-            width: 100%;
-        }
-        .modal form > div:first-child > div:first-child {
-            order: 1;
-        }
-        .modal form > div:first-child > div:last-child {
-            order: 2;
-        }
-        .modal form > div:nth-child(2) {
-            order: 3;
-        }
-        .modal form > div:nth-child(3) {
-            order: 4;
-        }
-        .modal > div:last-child > div > div:nth-child(2) {
-            order: 5;
-            margin-bottom: 4px;
-        }
-        .modal form > div:nth-child(4) {
-            order: 6;
-            padding: 16px !important;
-        }
-        .modal form > div:nth-child(4) p:first-child {
-            font-size: 11px !important;
-        }
-        .modal form > div:nth-child(4) p:nth-child(2) {
-            font-size: 20px !important;
-        }
-        .modal form > div:nth-child(4) p:nth-child(2) span {
-            font-size: 12px !important;
-        }
-        .modal form > div:nth-child(4) > div {
-            width: 32px !important;
-            height: 32px !important;
-        }
-        .modal form > div:nth-child(4) > div svg {
-            width: 16px !important;
-            height: 16px !important;
-        }
-        .modal button[type="submit"] {
-            padding: 14px !important;
-            font-size: 14px !important;
-            border-radius: 12px !important;
-            height: 48px;
-            margin-top: 4px !important;
-        }
-        .modal p:last-child {
-            font-size: 9px !important;
-            margin-top: 16px !important;
-        }
-        .modal .modal-close {
-            top: 12px !important;
-            right: 12px !important;
-            width: 28px !important;
-            height: 28px !important;
-        }
+    /* ===== RESPONSIVE MODAL - MOBILE ===== */
+    @media screen and (max-width: 480px) {
+        .modal { align-items: flex-start !important; padding-top: 20px !important; padding-bottom: 20px !important; overflow-y: auto !important; }
+        .modal-overlay-gradient { display: none !important; }
+        .modal-wrapper { max-width: 95% !important; width: 95% !important; padding: 0 !important; margin: 40px auto !important; }
+        .modal-card { padding: 24px 20px 20px !important; border-radius: 20px !important; }
+        .modal-header { margin-bottom: 20px !important; }
+        .modal-icon { width: 40px !important; height: 40px !important; border-radius: 12px !important; margin-bottom: 14px !important; }
+        .modal-icon svg { width: 20px !important; height: 20px !important; }
+        .modal-title { font-size: 22px !important; letter-spacing: -0.3px !important; }
+        .modal-desc { font-size: 12px !important; line-height: 1.4 !important; }
+        .modal-form { gap: 12px !important; }
+        .modal-label { font-size: 9px !important; margin-bottom: 5px !important; }
+        .modal-input { padding: 12px 14px !important; font-size: 15px !important; border-radius: 10px !important; height: 48px; width: 100%; box-sizing: border-box; }
+        .modal-row { display: flex !important; flex-direction: column !important; gap: 12px !important; }
+        .modal-row > div { width: 100%; }
+        .modal-monto { padding: 14px !important; border-radius: 12px !important; }
+        .modal-monto-label { font-size: 11px !important; }
+        .modal-monto-amount { font-size: 20px !important; }
+        .modal-monto-amount span { font-size: 12px !important; }
+        .modal-monto-check { width: 32px !important; height: 32px !important; flex-shrink: 0; }
+        .modal-monto-check svg { width: 16px !important; height: 16px !important; }
+        .modal-submit { padding: 14px 16px !important; font-size: 15px !important; border-radius: 12px !important; height: 52px; margin-top: 6px !important; }
+        .modal-footer { font-size: 9px !important; margin-top: 14px !important; line-height: 1.4; }
+        .modal-close-btn { top: 10px !important; right: 10px !important; width: 28px !important; height: 28px !important; }
     }
     
-    @media (max-width: 375px) {
-        .modal > div:last-child > div {
-            padding: 24px 18px 20px !important;
-        }
-        .modal h3 {
-            font-size: 20px !important;
-        }
-        .modal input, .modal select {
-            padding: 11px 12px !important;
-            font-size: 13px !important;
-        }
+    /* ===== RESPONSIVE MODAL - SMALL MOBILE ===== */
+    @media screen and (max-width: 375px) {
+        .modal-card { padding: 20px 16px 16px !important; }
+        .modal-title { font-size: 20px !important; }
+        .modal-desc { font-size: 11px !important; }
+        .modal-input { padding: 11px 12px !important; font-size: 14px !important; height: 46px; }
+        .modal-monto { padding: 12px !important; }
+        .modal-monto-amount { font-size: 18px !important; }
+        .modal-submit { height: 50px; font-size: 14px !important; }
     }
     
-    @media (max-width: 320px) {
-        .modal > div:last-child > div {
-            padding: 20px 16px 18px !important;
-        }
-        .modal h3 {
-            font-size: 18px !important;
-        }
-        .modal input, .modal select {
-            padding: 10px 12px !important;
-            font-size: 13px !important;
-        }
-        .modal form > div:nth-child(4) p:nth-child(2) {
-            font-size: 18px !important;
-        }
+    /* ===== RESPONSIVE MODAL - TINY MOBILE ===== */
+    @media screen and (max-width: 320px) {
+        .modal-card { padding: 18px 14px 14px !important; }
+        .modal-title { font-size: 18px !important; }
+        .modal-icon { width: 36px !important; height: 36px !important; border-radius: 10px !important; }
+        .modal-input { padding: 10px 12px !important; font-size: 13px !important; height: 44px; }
+        .modal-monto-amount { font-size: 16px !important; }
+        .modal-submit { height: 48px; font-size: 13px !important; padding: 12px !important; }
     }
     
-    @media (max-height: 600px) and (orientation: landscape) {
-        .modal > div:last-child {
-            max-width: 95% !important;
-            padding: 16px !important;
-        }
-        .modal > div:last-child > div {
-            padding: 20px !important;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-        .modal > div:last-child > div > div:first-child {
-            width: 36px !important;
-            height: 36px !important;
-            border-radius: 10px !important;
-            margin-bottom: 0 !important;
-        }
-        .modal > div:last-child > div > div:first-child svg {
-            width: 18px !important;
-            height: 18px !important;
-        }
-        .modal h3 {
-            font-size: 18px !important;
-            width: 100%;
-            order: 1;
-        }
-        .modal p {
-            font-size: 11px !important;
-            width: 100%;
-            order: 2;
-            margin-bottom: 8px !important;
-        }
-        .modal form {
-            display: flex !important;
-            flex-wrap: wrap !important;
-            gap: 8px !important;
-            width: 100%;
-            order: 3;
-        }
-        .modal form > div:first-child {
-            display: flex !important;
-            gap: 8px !important;
-        }
-        .modal form > div:first-child > div {
-            flex: 1;
-            min-width: 45%;
-        }
-        .modal form > div:nth-child(2),
-        .modal form > div:nth-child(3) {
-            flex: 1;
-            min-width: 45%;
-        }
-        .modal form > div:nth-child(4) {
-            flex: 1 1 100% !important;
-            padding: 12px !important;
-        }
-        .modal button[type="submit"] {
-            position: absolute;
-            bottom: 16px;
-            right: 20px;
-            width: auto !important;
-            padding: 10px 20px !important;
-            order: 4;
-        }
-        .modal p:last-child {
-            display: none;
-        }
-        .modal .modal-close {
-            top: 8px !important;
-            right: 8px !important;
-        }
+    /* ===== RESPONSIVE MODAL - LANDSCAPE ===== */
+    @media screen and (max-height: 580px) and (orientation: landscape) {
+        .modal { align-items: center !important; padding: 16px !important; overflow-y: auto; }
+        .modal-wrapper { margin: 0 auto !important; }
+        .modal-card { padding: 16px !important; border-radius: 16px !important; max-height: 95vh; overflow-y: auto; }
+        .modal-icon { width: 32px !important; height: 32px !important; border-radius: 8px !important; margin-bottom: 8px !important; }
+        .modal-icon svg { width: 16px !important; height: 16px !important; }
+        .modal-header { margin-bottom: 12px !important; }
+        .modal-title { font-size: 16px !important; }
+        .modal-desc { font-size: 10px !important; margin-bottom: 8px !important; }
+        .modal-form { gap: 8px !important; flex-wrap: wrap; }
+        .modal-row { display: flex !important; flex-wrap: wrap; gap: 6px !important; }
+        .modal-row > div { flex: 1 1 45%; min-width: 45%; }
+        .modal-label { font-size: 8px !important; margin-bottom: 4px !important; }
+        .modal-input { padding: 8px 10px !important; font-size: 12px !important; height: 36px; }
+        .modal-monto { padding: 10px !important; border-radius: 8px !important; flex: 1 1 100% !important; }
+        .modal-monto-amount { font-size: 14px !important; }
+        .modal-submit { position: absolute; bottom: 12px; right: 16px; width: auto !important; padding: 8px 16px !important; font-size: 12px !important; height: auto; }
+        .modal-footer { display: none !important; }
     }
     </style>
 

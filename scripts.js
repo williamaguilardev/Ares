@@ -33,7 +33,7 @@ function initScrollProgress() {
 function initModal() {
     const modal = document.getElementById('modal');
     const overlay = modal?.querySelector('.modal-overlay');
-    const closeBtn = modal?.querySelector('.modal-close');
+    const closeBtn = modal?.querySelector('.modal-close-btn');
     const reserveBtns = document.querySelectorAll('[href="#reservar"], .btn-reserve');
     const form = document.getElementById('reserveForm');
 

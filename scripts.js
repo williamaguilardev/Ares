@@ -103,6 +103,15 @@ function initAnimations() {
         ease: 'power3.out'
     });
 
+    gsap.from('.stat', {
+        y: 30,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.1,
+        delay: 0.5,
+        ease: 'power3.out'
+    });
+
     gsap.utils.toArray('.section-header').forEach(header => {
         gsap.from(header, {
             scrollTrigger: {
@@ -166,15 +175,75 @@ function initAnimations() {
         ease: 'power3.out'
     });
 
-    gsap.from('.spec-card-premium', {
+    gsap.from('.spec-feature', {
         scrollTrigger: {
-            trigger: '.specs-premium-grid',
+            trigger: '#especificaciones',
+            start: 'top 70%'
+        },
+        y: 80,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.2,
+        ease: 'power4.out'
+    });
+
+    gsap.to('.metric-item', {
+        scrollTrigger: {
+            trigger: '.specs-metrics',
             start: 'top 80%'
         },
-        y: 60,
-        opacity: 0,
+        y: 0,
+        opacity: 1,
         duration: 0.8,
-        stagger: 0.15,
+        stagger: 0.1,
         ease: 'power3.out'
     });
+
+    document.querySelectorAll('.metric-number').forEach(el => {
+        const target = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        
+        gsap.to({
+            val: 0
+        }, {
+            val: target,
+            duration: 2,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: '.specs-metrics',
+                start: 'top 80%'
+            },
+            onUpdate: function() {
+                el.textContent = Math.round(this.targets()[0].val) + suffix;
+            }
+        });
+    });
 }
+
+function animateCounters() {
+    const counters = document.querySelectorAll('.stat-value[data-target], .metric-number[data-target]');
+    
+    counters.forEach(counter => {
+        const target = parseInt(counter.dataset.target);
+        const prefix = counter.dataset.prefix || '';
+        const suffix = counter.dataset.suffix || '';
+        const span = counter.querySelector('span') || '';
+        
+        const obj = { val: 0 };
+        
+        gsap.to(obj, {
+            val: target,
+            duration: 2,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: counter,
+                start: 'top 80%'
+            },
+            onUpdate: () => {
+                counter.innerHTML = prefix + Math.round(obj.val) + suffix + (span ? '<span>' + (span.textContent || '') + '</span>' : '');
+            }
+        });
+    });
+}
+
+animateCounters();

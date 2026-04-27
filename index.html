@@ -74,18 +74,18 @@
             </div>
             
             <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-value">42<span>m²</span></span>
+                <div class="stat" data-animate>
+                    <span class="stat-value" data-target="42">0<span>m²</span></span>
                     <span class="stat-label">Área</span>
                 </div>
                 <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-value">12<span>%</span></span>
+                <div class="stat" data-animate>
+                    <span class="stat-value" data-target="12" data-suffix="%">0<span>%</span></span>
                     <span class="stat-label">ROI anual</span>
                 </div>
                 <div class="stat-divider"></div>
-                <div class="stat">
-                    <span class="stat-value">$28K<span>/mes</span></span>
+                <div class="stat" data-animate>
+                    <span class="stat-value" data-target="28" data-prefix="$" data-suffix="K">0<span>/mes</span></span>
                     <span class="stat-label">Renta Airbnb</span>
                 </div>
             </div>
@@ -174,11 +174,19 @@
             </div>
         </div>
         
-        <div style="display: flex; justify-content: center; gap: 80px; margin-top: 60px; padding-bottom: 60px;">
-            <div style="text-align: center;"><span style="font-size: 48px; font-weight: 700; color: #fff;">45</span><span style="font-size: 14px; color: #888; display: block; margin-top: 8px;">días de entrega</span></div>
-            <div style="text-align: center;"><span style="font-size: 48px; font-weight: 700; color: #fff;">10</span><span style="font-size: 14px; color: #888; display: block; margin-top: 8px;">años garantía</span></div>
-            <div style="text-align: center;"><span style="font-size: 48px; font-weight: 700; color: #fff;">70%</span><span style="font-size: 14px; color: #888; display: block; margin-top: 8px;">eficiencia térmica</span></div>
-            <div style="text-align: center;"><span style="font-size: 48px; font-weight: 700; color: #fff;">4</span><span style="font-size: 14px; color: #888; display: block; margin-top: 8px;">estancias</span></div>
+        <div class="specs-metrics" style="display: flex; justify-content: center; gap: 80px; margin-top: 60px; padding-bottom: 60px;">
+            <div class="metric-item" style="text-align: center; opacity: 0; transform: translateY(30px);" data-animate>
+                <span class="metric-number" style="font-size: 48px; font-weight: 700; color: #fff;" data-target="45">0</span><span style="font-size: 14px; color: #888; display: block; margin-top: 8px;">días de entrega</span>
+            </div>
+            <div class="metric-item" style="text-align: center; opacity: 0; transform: translateY(30px);" data-animate>
+                <span class="metric-number" style="font-size: 48px; font-weight: 700; color: #fff;" data-target="10" data-suffix="+">0</span><span style="font-size: 14px; color: #888; display: block; margin-top: 8px;">años garantía</span>
+            </div>
+            <div class="metric-item" style="text-align: center; opacity: 0; transform: translateY(30px);" data-animate>
+                <span class="metric-number" style="font-size: 48px; font-weight: 700; color: #fff;" data-target="70" data-suffix="%">0</span><span style="font-size: 14px; color: #888; display: block; margin-top: 8px;">eficiencia térmica</span>
+            </div>
+            <div class="metric-item" style="text-align: center; opacity: 0; transform: translateY(30px);" data-animate>
+                <span class="metric-number" style="font-size: 48px; font-weight: 700; color: #fff;" data-target="4">0</span><span style="font-size: 14px; color: #888; display: block; margin-top: 8px;">estancias</span>
+            </div>
         </div>
     </section>
 

@@ -574,6 +574,9 @@ input, select {
     position: relative;
     cursor: pointer;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
 }
 
 .spec-card-premium:hover {
@@ -582,8 +585,9 @@ input, select {
 
 .spec-card-image {
     position: relative;
-    height: 280px;
+    height: 200px;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .spec-card-image img {
@@ -602,21 +606,14 @@ input, select {
     inset: 0;
     background: linear-gradient(to top, var(--black) 0%, transparent 60%);
     opacity: 0.8;
-    transition: opacity 0.4s ease;
+    pointer-events: none;
 }
 
 .spec-card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     padding: 24px;
-    transform: translateY(60px);
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.spec-card-premium:hover .spec-card-content {
-    transform: translateY(0);
+    background: var(--black);
+    flex-grow: 1;
 }
 
 .spec-card-number {
@@ -640,14 +637,6 @@ input, select {
     color: var(--gray-400);
     line-height: 1.5;
     margin-bottom: 16px;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.4s ease 0.1s;
-}
-
-.spec-card-premium:hover .spec-card-desc {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .spec-card-features {
@@ -657,14 +646,6 @@ input, select {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.4s ease 0.2s;
-}
-
-.spec-card-premium:hover .spec-card-features {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .spec-card-features li {

@@ -38,12 +38,12 @@ function initModal() {
     const form = document.getElementById('reserveForm');
 
     const openModal = () => {
-        modal.classList.add('active');
+        modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
     };
 
     const closeModal = () => {
-        modal.classList.remove('active');
+        modal.style.display = 'none';
         document.body.style.overflow = '';
     };
 
@@ -58,7 +58,7 @@ function initModal() {
     if (overlay) overlay.addEventListener('click', closeModal);
 
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
+        if (e.key === 'Escape' && (modal.style.display !== 'none' || modal.classList.contains('active'))) {
             closeModal();
         }
     });
